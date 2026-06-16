@@ -71,7 +71,7 @@ Explicação do que acontece quando:
 vá em Exentended Controls (três pontos), Location, escolha o seu local e clique em Set Location
 
 
-## Prints do aplicativo
+
 ## Prints do aplicativo
 
 ![Tela inicial](prints/tela inicial.png)
