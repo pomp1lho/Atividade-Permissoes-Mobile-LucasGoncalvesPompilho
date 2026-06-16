@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/fundo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Titulo -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textColor="@color/azul_escuro"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitulo"
+            android:textColor="@color/cinza_rotulo"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Campo de entrada -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCep"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cep"
+            app:counterEnabled="true"
+            app:counterMaxLength="8"
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="8"
+                android:imeOptions="actionSearch" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botao de consulta -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/botao_consultar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+
+        <!-- Botao usar localizacao (aciona a permissao) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLocalizacao"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/botao_localizacao"
+            android:textSize="15sp"
+            app:icon="@android:drawable/ic_menu_mylocation"
+            app:cornerRadius="10dp" />
+
+        <!-- Indicador de carregamento -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <!-- Mensagem de erro -->
+        <TextView
+            android:id="@+id/tvMensagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/vermelho_erro"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- Card de resultado -->
+        <LinearLayout
+            android:id="@+id/cardResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_resultado"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotulo_logradouro"
+                android:textColor="@color/cinza_rotulo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvLogradouro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cinza_texto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotulo_bairro"
+                android:textColor="@color/cinza_rotulo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvBairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cinza_texto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotulo_cidade"
+                android:textColor="@color/cinza_rotulo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvCidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cinza_texto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotulo_estado"
+                android:textColor="@color/cinza_rotulo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cinza_texto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotulo_ddd"
+                android:textColor="@color/cinza_rotulo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cinza_texto"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

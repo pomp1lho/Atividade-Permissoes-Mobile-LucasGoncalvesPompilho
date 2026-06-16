@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Consulta CEP</string>
+    <string name="titulo">Consulta de CEP</string>
+    <string name="subtitulo">Digite um CEP para buscar o endereço</string>
+    <string name="hint_cep">Digite o CEP (somente números)</string>
+    <string name="label_cep">CEP</string>
+    <string name="botao_consultar">Consultar</string>
+    <string name="botao_localizacao">Usar minha localização</string>
+
+    <string name="erro_campo_vazio">Por favor, digite um CEP.</string>
+    <string name="erro_cep_invalido">CEP inválido. Digite 8 números.</string>
+    <string name="erro_cep_nao_encontrado">CEP não encontrado. Verifique e tente novamente.</string>
+    <string name="erro_conexao">Erro de conexão. Verifique sua internet.</string>
+    <string name="carregando">Consultando…</string>
+
+    <string name="permissao_explicacao">Para preencher o CEP automaticamente, o app precisa acessar sua localização.</string>
+    <string name="permissao_negada">Permissão de localização negada. Você ainda pode digitar o CEP manualmente.</string>
+    <string name="localizando">Obtendo sua localização…</string>
+    <string name="erro_localizacao">Não foi possível obter sua localização. Tente novamente.</string>
+    <string name="erro_cep_localizacao">Não foi possível identificar o CEP da sua localização.</string>
+    <string name="cep_preenchido">CEP da sua localização preenchido! Toque em Consultar.</string>
+
+    <string name="rotulo_logradouro">Logradouro</string>
+    <string name="rotulo_bairro">Bairro</string>
+    <string name="rotulo_cidade">Cidade</string>
+    <string name="rotulo_estado">Estado (UF)</string>
+    <string name="rotulo_ddd">DDD</string>
+</resources>
